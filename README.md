@@ -1,6 +1,6 @@
 # ESP8266 LED Strip dimmer for TJCLEMENT's HW
 
-This project is FIRMWARE for [TJCLEMENT's HW](https://github.com/tjclement/esp-dimmer-hardware) which I can very recommend, no need for serious soldering skillz as if I was able to build it, everyone can too. I hope that following this README will be as straightforward as possible. In case you have questions do not hesitate to contact me using [Issues](https://github.com/ArnieX/esp8266_dimmer_firmware/issues).
+This project is FIRMWARE for [TJCLEMENT's HW](https://github.com/tjclement/esp-dimmer-hardware) which I can very recommend, no need for serious soldering skillz as if I was able to build it, everyone can too. I hope that following this README will be as straightforward as possible. In case you have questions do not hesitate to contact me using [Issues](https://github.com/ArnieX/esp-dimmer-firmware/issues).
 
 ## Dependencies
 - Some MQTT server (If you have Raspberry Pi use Mosquitto) - Source contains public broker as default good for testing.
@@ -62,4 +62,4 @@ Receive back from your device:
 
 ## The MODULE
 
-[LED Strip MODULE from TJCLEMENT](http://img.youtube.com/vi/KB4Ermphibo/0.jpg)
+[LED Strip MODULE from TJCLEMENT](https://github.com/ArnieX/esp-dimmer-firmware/blob/master/images/IMG_1468-2.JPG?raw=true)
