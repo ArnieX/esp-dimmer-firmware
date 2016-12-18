@@ -1,9 +1,9 @@
-# ESP8266 (NodeMCU) dimmer control
+# ESP8266 LED Strip dimmer for TJCLEMENT's HW
 
-This project is next step of my [relay control project](https://github.com/ArnieX/esp8266_relay_mqtt) where I controled only ON/OFF state of the LED Strip. I hope that following this README will be as straightforward as possible. In case you have questions do not hesitate to contact me using [Issues](https://github.com/ArnieX/esp8266_dimmer_mqtt/issues).
+This project is FIRMWARE for [TJCLEMENT's HW](https://github.com/tjclement/esp-dimmer-hardware) which I can very recommend, no need for serious soldering skillz as if I was able to build it, everyone can too. I hope that following this README will be as straightforward as possible. In case you have questions do not hesitate to contact me using [Issues](https://github.com/ArnieX/esp8266_dimmer_firmware/issues).
 
 ## Dependencies
-- Some MQTT server (If you have Raspberry Pi use Mosquitto)
+- Some MQTT server (If you have Raspberry Pi use Mosquitto) - Source contains public broker as default good for testing.
 - Optional is [Homebridge](https://github.com/nfarina/homebridge) with [MQTT Plugin](https://github.com/cflurin/homebridge-mqtt) to control the relay from iDevices
 - Optional that will make your life easier with IoT is Node-RED, plus you can get decent dashboard with Node-RED Dashboard plugin
 - [PlatformIO](https://github.com/platformio/platformio) best Arduino IDE available, hacked from ATOM text editor
@@ -20,9 +20,7 @@ pio lib -g install PubSubClient
 pio lib -g install ESP8266wifi
 ```
 
-- Dimming module (Make the one attached, it was made by my neighbour) or buy some cheap on AliExpress/eBay and change the code if needed
-
-![Dimming module scheme](images/DimmingModule.jpg?raw=true)
+- Dimming module from [TJCLEMENT](https://github.com/tjclement/esp-dimmer-hardware) (Cheap ca. 5$)
 
 ## Getting started
 
@@ -35,13 +33,11 @@ Update main.ino with your custom preferences
 
 [17-23] Change MQTT topics (THIS IS OPTIONAL and I do not recommend to change it for first test of function)
 
-[35] Set your OTA password, this will be used for secured OTA update using PlatformIO, change this respectively in platformio.ini too
-
-[192-194] Pin setup, PWM range, and turn off by default. Change PIN number if needed and make sure you change it everywhere.
+[37] Set your OTA password, this will be used for secured OTA update using PlatformIO, change this respectively in platformio.ini too
 
 Update platformio.ini with your custom preferences (Do not change unless you want to turn OTA ON)
 
-[14 and 15] To enable OTA for next updates uncomment these lines and change values to reflect your enviroment
+[14 and 15] To enable OTA for next updates uncomment these lines and change values to reflect your environment
 
 To turn OTA OFF any time, just comment these lines again with ;
 
@@ -59,13 +55,11 @@ Receive back from your device:
 
 |TOPIC|DESCRIPTION|
 |---|---|
-|home/room/device_name/devicestatus|Will contain device status eg connected|
+|home/room/device_name/devicestatus|Will contain device status eg. connected/disconnected|
 |home/room/ledstrip/status|Current ON/OFF status 1/0|
 |home/room/ledstrip/brightness/status|Current brightness level, number 0-100|
 |home/pingallresponse|This will contain status after you send pingall request and all devices should respond|
 
-## Result
+## The MODULE
 
-**Click the image to play video on YouTube:**
-
-[![LED Strip dimming with Siri, Homebridge and NodeMCU (ESP8266)](http://img.youtube.com/vi/KB4Ermphibo/0.jpg)](https://www.youtube.com/watch?v=KB4Ermphibo)
+[LED Strip MODULE from TJCLEMENT](http://img.youtube.com/vi/KB4Ermphibo/0.jpg)
