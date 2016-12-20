@@ -62,4 +62,4 @@ Receive back from your device:
 
 ## The MODULE
 
-![LED Strip MODULE from TJCLEMENT](https://github.com/ArnieX/esp-dimmer-firmware/blob/master/images/IMG_1468-2.JPG?raw=true)
+![LED Strip MODULE from TJCLEMENT](https://github.com/ArnieX/esp-dimmer-firmware/blob/master/images/Dimmer_HW.JPG?raw=true)
